@@ -1,3 +1,19 @@
+@import './variables.scss';
+
+:export { lightOrange: $light-orange }
+
 .buttonPanel {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  &>* {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  .groupOne:nth-child(2) {
+    background-color: $light-orange;
+  }
 }
