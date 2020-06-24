@@ -5,8 +5,12 @@ import '../styles/Button.scss';
 export default function Button(props) {
 
   return(
-    <button>
-      Hello
+    <button className="buttonSquare">
+      {props.name}
     </button>
-  )
+  );
 }
+
+Button.propTypes = {
+  name: PropTypes.string,
+};
