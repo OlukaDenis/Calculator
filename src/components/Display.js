@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Display.scss';
 
-export default class Display extends Component {
-
-  render() {
-    return(
-      <div className="displayContainer">
-        {this.props.result}
-      </div>
-    )
-  }
+export default function Display(props) {
+  const { result } = props;
+  return (
+    <div className="displayContainer">
+      {result}
+    </div>
+  );
 }
+
+Display.defaultProps = {
+  result: '0',
+};
 
 Display.propTypes = {
   result: PropTypes.string,
-};
-
-Display.defaulProps = {
-  result: '0',
 };
