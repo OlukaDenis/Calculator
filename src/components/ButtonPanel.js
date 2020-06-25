@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
-import styles from '../styles/ButtonPanel.scss';
+import '../styles/ButtonPanel.scss';
+
 const lightorange = '#ffa64d';
 
 export default function ButtonPanel() {
