@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Display.scss';
 
-export default function Display(props) {
-  const { result } = props;
-  return (
-    <div className="displayContainer">
-      {result}
-    </div>
-  );
+export default class Display extends React.Component {
+
+  render() {
+    const { total, next, operation } = this.props;
+    return (
+      <div className="displayContainer">
+        {operation ? next : total}
+      </div>
+    );
+  }
 }
 
 Display.defaultProps = {

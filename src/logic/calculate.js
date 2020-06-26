@@ -1,7 +1,7 @@
 import operate from './operate';
 
-export default function calculate(calculate, buttonName) {
-  let { total, next, operation } = calculate;
+export default function calculate(calcObject, buttonName) {
+  let { total, next, operation } = calcObject;
   const symbols = ['-', '+', '÷', 'x'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
