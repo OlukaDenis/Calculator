@@ -19,6 +19,12 @@ export default function calculate(calcObject, buttonName) {
     operation = '%';
   }
 
+  if (buttonName === '.') {
+    if (total.length === 1) {
+      total = total + buttonName;
+    }
+  }
+
   if (buttonName === '=') {
     if (total && next && operation) {
       total = operate(total, next, operation);
