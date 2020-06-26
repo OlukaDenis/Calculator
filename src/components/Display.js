@@ -2,22 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Display.scss';
 
-export default class Display extends React.Component {
-
-  render() {
-    const { total, next, operation } = this.props;
-    return (
-      <div className="displayContainer">
-        {operation ? next : total}
-      </div>
-    );
-  }
+export default function Display(props) {
+  const { total, next, operation } = props;
+  return (
+    <div className="displayContainer">
+      {operation ? next : total}
+    </div>
+  );
 }
 
 Display.defaultProps = {
-  result: '0',
+  total: '0',
+  next: '0',
+  operation: '0',
 };
 
 Display.propTypes = {
-  result: PropTypes.string,
+  total: PropTypes.string,
+  next: PropTypes.string,
+  operation: PropTypes.string,
 };

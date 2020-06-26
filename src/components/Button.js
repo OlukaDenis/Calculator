@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Button.scss';
 
-export default function Button({ name, color, wide, clickHandler }) {
+export default function Button({
+  name, color, wide, clickHandler,
+}) {
   const btnWidth = wide ? '50%' : '25%';
   return (
     <button

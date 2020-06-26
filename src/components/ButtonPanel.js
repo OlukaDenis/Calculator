@@ -1,11 +1,11 @@
-import { React, Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import '../styles/ButtonPanel.scss';
 
 const lightorange = '#ffa64d';
 
-export default class ButtonPanel extends Component {
+export default class ButtonPanel extends React.Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ export default class ButtonPanel extends Component {
   }
 
   handleClick(buttonName) {
-    const { clickHandler } = this.props
+    const { clickHandler } = this.props;
     return clickHandler(buttonName);
   }
 
@@ -56,4 +56,4 @@ export default class ButtonPanel extends Component {
 
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
-}
+};

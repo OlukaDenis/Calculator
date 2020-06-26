@@ -1,10 +1,10 @@
-import { React, Component } from 'react';
+import React from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import '../styles/App.scss';
 import calculate from '../logic/calculate';
 
-export default class App extends Component {
+export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -17,15 +17,15 @@ export default class App extends Component {
   }
 
   handleClick(buttonName) {
-    const res = calculate(this.state, buttonName)
-    this.setState({ ...res })
+    const res = calculate(this.state, buttonName);
+    this.setState({ ...res });
   }
 
   render() {
     const { total, next, operation } = this.state;
     return (
       <div className="App" id="calculatorApp">
-        <Display total={total || 0} next={next || 0}  />
+        <Display total={total || 0} next={next || 0} operation={operation} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
