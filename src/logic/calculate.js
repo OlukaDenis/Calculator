@@ -5,16 +5,6 @@ export default function calculate(calculate, buttonName) {
   const symbols = ['-', '+', '÷', 'x'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-  const invertNumber = (text) => {
-    const value = text.split('');
-    if (value[0] === '-') {
-      value.shift();
-    } else {
-      value.unshift('-');
-    }
-    return value.join('');
-  };
-
   if (buttonName === 'AC') {
     total = null;
     next = null;
@@ -22,7 +12,10 @@ export default function calculate(calculate, buttonName) {
   }
 
   if (buttonName === '+/-') {
-   next = invertNumber(next);
+    total = (total * (-1)).toString();
+    if (total) {
+      next = (next * (-1)).toString();
+    }
   }
 
   if (buttonName === '%') {
