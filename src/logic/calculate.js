@@ -10,8 +10,11 @@ export default function calculate(calcObject, buttonName) {
   }
 
   if (buttonName === '+/-') {
-    total = (total * (-1)).toString();
-    if (total) {
+    if (total && next == null) {
+      total = (total * (-1)).toString();
+      next = null; 
+    }
+    if (total && next) {
       next = (next *(-1)).toString();
     }
   }
