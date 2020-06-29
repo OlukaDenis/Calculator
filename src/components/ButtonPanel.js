@@ -17,7 +17,7 @@ export default function ButtonPanel() {
         <Button wide={false} name="7" />
         <Button wide={false} name="8" />
         <Button wide={false} name="9" />
-        <Button wide={false} color={lightorange} name="X" />
+        <Button wide={false} color={lightorange} name="x" />
       </div>
       <div className="groupThree">
         <Button wide={false} name="4" />
