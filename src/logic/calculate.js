@@ -11,7 +11,9 @@ export default function calculate(calcObject, buttonName) {
 
   if (buttonName === '+/-') {
     total = (total * (-1)).toString();
-    next = (next * (-1)).toString();
+    if (total) {
+      next = (next *(-1)).toString();
+    }
   }
 
   if (buttonName === '%') {
@@ -28,7 +30,7 @@ export default function calculate(calcObject, buttonName) {
   if (buttonName === '=') {
     if (total && next && operation) {
       total = operate(total, next, operation);
-      next = null;
+      next = total;
       operation = null;
     }
   }
