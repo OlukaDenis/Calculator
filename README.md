@@ -3,6 +3,9 @@
 This is part of React and Redux section in Microverse's Technical curriculum. Find it [here](https://microverse.pathwright.com/library/fast-track-curriculum/69047/path/step/44896082/).
 The goal of the project is to build a simple calculator with basics of react.
 
+## Screenshot
+![calc](https://user-images.githubusercontent.com/37341054/86093589-e27f5a80-bab7-11ea-94d4-b5119f06419e.png)
+
 ## Built With
 - React
 - ES6
@@ -11,7 +14,8 @@ The goal of the project is to build a simple calculator with basics of react.
 - SASS
 
 ## Live Demo
-[Live link](hhttps://denny-calc.herokuapp.com/)
+
+ [Live link](https://denny-calc.herokuapp.com)
 
 
 ## Prerequisites
